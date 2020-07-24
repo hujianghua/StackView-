@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StackView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StackView高级用法，隐藏一个控件，另一个控件自动居中" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6F-6a-jXn">
+                                <rect key="frame" x="16" y="289.5" width="382" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="YOd-lA-gQ9">
+                                <rect key="frame" x="57" y="430.5" width="300" height="45"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="use-na-L22">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="45"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="DEq-wE-qd1"/>
+                                            <constraint firstAttribute="height" constant="45" id="JFC-Gx-T92"/>
+                                        </constraints>
+                                        <state key="normal" title="取消">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WzJ-fG-zJm">
+                                        <rect key="frame" x="150" y="0.0" width="150" height="45"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="Mje-PD-1lX"/>
+                                            <constraint firstAttribute="height" constant="45" id="biT-zT-ltP"/>
+                                        </constraints>
+                                        <state key="normal" title="确定">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CvE-m8-8Dt">
+                                <rect key="frame" x="107" y="575.5" width="200" height="50"/>
+                                <color key="backgroundColor" red="0.0004705882353" green="0.00098039215690000001" blue="0.00137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Zo8-Uw-hiL"/>
+                                    <constraint firstAttribute="height" constant="50" id="zCj-gO-Ipj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="按钮居中">
+                                    <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="centerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e3E-Qd-a1C"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="k6F-6a-jXn" secondAttribute="trailing" constant="16" id="VQt-Jt-e5T"/>
+                            <constraint firstItem="k6F-6a-jXn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Wnk-dD-f9f"/>
+                            <constraint firstItem="YOd-lA-gQ9" firstAttribute="top" secondItem="k6F-6a-jXn" secondAttribute="bottom" constant="100" id="Wyg-UH-CRq"/>
+                            <constraint firstItem="YOd-lA-gQ9" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="e7B-zY-Uem"/>
+                            <constraint firstItem="CvE-m8-8Dt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fPJ-ya-VFR"/>
+                            <constraint firstItem="YOd-lA-gQ9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="rz4-un-dZW"/>
+                            <constraint firstItem="CvE-m8-8Dt" firstAttribute="top" secondItem="YOd-lA-gQ9" secondAttribute="bottom" constant="100" id="v0D-1F-gdu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cancelBtn" destination="use-na-L22" id="gah-Bh-yG9"/>
+                        <outlet property="okBtn" destination="WzJ-fG-zJm" id="DHa-OR-wyp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="322" y="111"/>
+        </scene>
+    </scenes>
+</document>
